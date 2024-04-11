@@ -14,8 +14,12 @@ $f3 = Base::instance();
 
 // define a default route
 $f3->route('GET /', function () {
-    // just echo howdy as our default for now
-    echo '<h1>Howdy!</h1>';
+    // add a view for the page
+    // first create a template
+    $view = new Template();
+    //direct view to that template
+    echo $view->render('view.html');
+
 });
 
 // Run fat-free
